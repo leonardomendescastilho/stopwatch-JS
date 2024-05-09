@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: roboto, raleway, sans-serif;
+}
+:root {
+  --stopwatch-light-color: #fff;
+  --stopwatch-dark-color: #000;
+  --stopwatch-primary-color: bisque;
+  --stopwatch-secondary-color:  rgb(165, 54, 54);
+  --stopwatch-primary-shade:  rgb(161, 36, 36);
+  --stopwatch-secondary-shade: #f0cdbc;
+
+  --shadow-color: 0px 0px 57px -7px rgba(119, 119, 119, 0.20);
+}
+@media (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+button {
+  all: unset;
+  cursor: pointer;
+  margin-block-start: 10px;
+  border: 2px solid var(--stopwatch-light-color);
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--stopwatch-primary-color)
+}
+button.secondary-button {
+  background-color: var(--stopwatch-secondary-color);
+  color: var(--stopwatch-light-color)
+}
+button:hover {
+  background-color: var(--stopwatch-secondary-shade);
+}
+button.secondary-button:hover {
+  background-color: var(--stopwatch-primary-shade)
+}
+button:focus {
+  border: 2px solid var(--stopwatch-dark-color);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: var(--stopwatch-light-color);
+  font-size: 3rem;
+}
+#stopwatch-wrapper {
+  background-color: var(--stopwatch-light-color);
+  box-shadow: var(--shadow-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.button-display {
+  margin: 1 rem 0 0.5rem 0;
+}
+#stopwatch-display {
+  font-family: major mono display, orbitron;
+  background-color: var(--stopwatch-dark-color);
+  color: var(--stopwatch-light-color);
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
